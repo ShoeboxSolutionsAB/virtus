@@ -195,8 +195,8 @@ module Virtus
     def coerce(attributes)
       if attributes.respond_to?(:to_unsafe_hash)
         attributes.to_unsafe_hash
-      elsif hash_attributes = ::Hash.try_convert(attributes)
-        hash_attributes
+        elsif
+        ::Hash.try_convert(attributes)
       else
         raise( NoMethodError, "Expected #{attributes.inspect} to respond to #to_hash" )
       end
